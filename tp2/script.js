@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     document.body.appendChild(resultDiv);
   });
+
   window.onload = () => {
     // https://developer.mozilla.org/fr/docs/Web/API/Window/load_event
     const paramsString = document.location.search; // récupérer des données envoyées par le formulaire
@@ -35,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   };
+  
   const element = document.getElementById(param[0]);
   if (element !== null) {
     element.textContent = param[1];
@@ -48,3 +50,4 @@ document.addEventListener('DOMContentLoaded', function() {
     const emailValue = param[1];
     element.href = `mailto:${emailValue}?subject=Hello!&body=What's up?`;
   }
+  
