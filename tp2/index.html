@@ -7,34 +7,31 @@
   <title>TP2</title>
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+  <link href="style.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <!-- Place favicon.ico in the root directory -->
-
-  <style>
-    body {
-      background-color: #e9ebee;
-      font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco",
-        "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-      font-size: 16px;
-      margin: 0 auto;
-      max-width: 800px;
-    }
-  </style>
-
-  <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-  <!--<link rel="stylesheet" href="style.css">-->
-  <!--<script src="js/main.js"></script>-->
-</head>
-
 <body>
-  <nav>
-    <a href="..">🏠 Index</a> / TP2
-  </nav>
-  <h1>tp2</h1>
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <img src="../galilee.png" alt="Logo Galilee" />
+    <form action="action.html" method="get">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" minlength="2" maxlength="20" required><br>
+        
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" minlength="2" maxlength="20" required><br>
+        
+        <label for="date_naissance">Date de naissance :</label>
+        <input type="date" id="date_naissance" name="date_naissance" required><br>
+        
+        <label for="adresse">Adresse :</label>
+        <input type="text" id="adresse" name="adresse" minlength="5" maxlength="50"required><br>
+        
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" minlength="5" maxlength="30" required><br>
+        
+        <input type="submit" value="Envoyer">
+      </form>
+      
 </body>
-
 </html>
