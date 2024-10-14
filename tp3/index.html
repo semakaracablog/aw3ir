@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.css">
     <script src="js/bootstrap.bundle.js"></script>
-    <script src="js/form-validation.js" defer></script> <!-- Assurez-vous d'utiliser defer -->
+    <script src="js/form-validation.js" defer></script> 
 </head>
 
 <body>
@@ -40,18 +40,24 @@
             <button type="submit" class="btn btn-primary">Valider</button>
         </form>
 
-        <!-- modal -->
+        <!-- pop up modal -->
         <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Bienvenue</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">Tous les champs ont été correctement validés.</div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
-                    </div>
+
+                    <div class="modal-body">
+                        <p></p>
+                        <!-- carte Google Maps qui va apparître après la bonne saisie du form -->
+                        <div id="mapContainer"></div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+                      </div>
                 </div>
             </div>
         </div>
