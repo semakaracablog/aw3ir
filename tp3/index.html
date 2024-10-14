@@ -1,5 +1,5 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
@@ -7,20 +7,54 @@
     <title>TP3</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
-
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/form-validation.js" defer></script> <!-- Assurez-vous d'utiliser defer -->
 </head>
 
 <body>
-    <nav>
-        <a href="..">🏠 Index</a> / TP3
-    </nav>
-    <h1>tp3</h1>
-    <!-- Add your site or application content here -->
-    <p>Hello world! This is HTML5 Boilerplate.</p>
-    <img src="../galilee.png" alt="Logo Galilee" />
-</body>
+    <div class="container">
+        <h1>TP AW</h1>
+        <p>Avec Bootstrap 5</p>
+        <form id="myForm">
+            <div class="row mb-3">
+                <label for="lastName" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+            </div>
+            <div class="row mb-3">
+                <label for="firstName" class="form-label">Prénom</label>
+                <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+            </div>
+            <div class="row mb-3">
+                <label for="birthday" class="form-label">Date de naissance</label>
+                <input type="date" class="form-control" id="birthday" required>
+            </div>
+            <div class="row mb-3">
+                <label for="address" class="form-label">Adresse</label>
+                <input type="text" class="form-control" id="address" placeholder="Enter your address">
+            </div>
+            <div class="row mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+            </div>
+            <button type="submit" class="btn btn-primary">Valider</button>
+        </form>
 
+        <!-- modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">Tous les champs ont été correctement validés.</div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
