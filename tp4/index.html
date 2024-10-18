@@ -1,5 +1,5 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
@@ -7,33 +7,89 @@
     <title>TP4</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
-
-    <style>
-        body {
-            background-color: #e9ebee;
-            font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-            font-size: 16px;
-            margin: 0 auto;
-            max-width: 800px;
-        }
-    </style>
-
-    <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-    <!--<link rel="stylesheet" href="style.css">-->
-    <!--<script src="main.js"></script>-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/form-validation.js" defer></script> 
+    <script src="js/gps.js" defer></script>
 </head>
 
 <body>
-    <nav>
-        <a href="..">🏠 Index</a> / TP4
-    </nav>
-    <h1>TP4</h1>
-    <!-- Add your site or application content here -->
-    <p>Hello world! This is HTML5 Boilerplate.</p>
-    <img src="../galilee.png" alt="Logo Galilee" />
-</body>
+    <div class="container">
+        <h1>TP4 AW</h1>
+        <p>Avec Bootstrap 5</p>
+        <form id="myForm">
+            <div class="row mb-3">
+                <label for="lastName" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+                <span id="lastNameCount" class="text-muted">0 carac.</span>
+            </div>
+            <div class="row mb-3">
+                <label for="firstName" class="form-label">Prénom</label>
+                <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+                <span id="firstNameCount" class="text-muted">0 carac.</span>
+            </div>
+            <div class="row mb-3">
+                <label for="birthday" class="form-label">Date de naissance</label>
+                <input type="date" class="form-control" id="birthday" required>
+            </div>
+            <div class="row mb-3">
+                <label for="address" class="form-label">Adresse</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="address" placeholder="Enter your address">
+                    <button type="button" id="geoBtn" class="btn btn-secondary"><i class='bx bx-current-location' style='color:#f50707'  ></i></button>
+                </div>
+                <span id="addressCount" class="text-muted">0 carac.</span>
+                    <div id="mapContainer" class="row mb-3"></div>
+                </div>
+            <div class="row mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                <span id="emailCount" class="text-muted">0 carac.</span>
+            </div>
+            <button type="submit" class="btn btn-primary">Valider</button>
+        </form>
 
+        <h2>Liste des contacts</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Date de Naissance</th>
+                    <th>Adresse</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+
+        </div>
+
+
+        <!-- pop up modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Bienvenue</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">Tous les champs ont été correctement validés.</div>
+
+                    <div class="modal-body">
+                        <p></p>
+                        <!-- carte Google Maps qui va apparître après la bonne saisie du form -->
+                        <div id="mapContainer"></div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+                      </div>
+                </div>
+            </div>
+        </div>
+</body>
 </html>
