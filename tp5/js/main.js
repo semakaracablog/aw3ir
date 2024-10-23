@@ -68,7 +68,7 @@ window.onload = function () {
       },
       // Nouvelle méthode pour appeler l'API des prévisions horaires
       getForecast: function (latitude, longitude) {
-        fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=eb3860cbfc7492f75d59029d99f49fcf&units=metric&lang=fr`)
+        fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=eb3860cbfc7492f75d59029d99f49fcf&units=metric`)
           .then(response => response.json())
           .then(json => {
             this.cityWeatherLoading = false;
@@ -77,7 +77,7 @@ window.onload = function () {
               return;
             }
             // Sauvegarder les prévisions horaires
-            this.cityForecast = json.list; // Récupérer les prévisions horaires
+            this.cityForecast = json; // Récupérer les prévisions horaires
           })
           .catch(error => {
             console.error('Erreur lors de la récupération des prévisions horaires : ', error);
